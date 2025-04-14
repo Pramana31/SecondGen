@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <title>Smart City</title>
+        <body style="overflow: auto;">
+            <style>
+                body{
+                    background-color: black;
+                    background-image:url(city2.jpeg);
+                    background-repeat: no-repeat;
+                    background-size:cover;
+                }
+        
+                ul {
+                    list-style-type: none;
+                    margin: none;
+                    padding: none;
+                    overflow: hidden;
+                    backface-visibility: hidden;
+                    background-color: white;
+                    font-size: 150%;
+                }
+                li {
+                    padding: 5px;
+                    float: left;
+                    display: inline-flex;
+                }
+
+                li a{
+                    display: block;
+                    color: black;
+                    text-align: center;
+                    padding: 14px 16px;
+                    text-decoration: none;
+                }
+
+                    /* Change the link color to #111 (black) on hover */
+                li a:hover {
+                    color : #15d849;
+                }
+                
+                
+                li img {
+                    display: block;
+                    width: 25%;
+                    margin-left: 10%;
+                    margin-right: 10%;
+                }
+                .dropdown-content {
+                    display: none;
+                    position: absolute;
+                    background-color: #f9f9f9;
+                    min-width: 160px;
+                    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                    z-index: 1;
+                }
+
+                .dropdown-content a {
+                    color: black;
+                    padding: 12px 16px;
+                    text-decoration: none;
+                }
+                .dropdown:hover .dropdown-content {
+                    display: block;
+                }
+
+                .dropdown:hover .dropbtn {
+                    background-color: #3e8e41;
+                }
+                .dropdown-content span{
+                    padding-top: 255%;
+                }
+                .image1 img{
+                    width: 150px;
+                    height: 130px;
+                }
+                p{
+                    color: white;
+                }
+            </style>
+            <ul class="item">
+                <li><img style="float:left" src="Travel Logo.jpg"></li><br>
+                <li><div class="dropdown">
+                    <span>Explore Cities</span>
+                    <div class="dropdown-content">
+                    <a href="#">Kolkata</a>
+                    <a href="#">Bangalore</a>
+                    <a href="#">Mumbai</a>
+                    <a href="#">Delhi</a>
+                    <a href="#">Chennai</a>
+                    </div>
+                  </div></li>
+                <li><a href="#contact">Hotels</a></li>
+                <li ><a href="#contact">Trip Planner</a></li>
+                <li style="float:right"><a href="#contact">About</a></li>
+                <li style="float:right"><a href="#about">Sign Up</a></li>
+              </ul>
+            <center><h1><p>Hello</p></h1></center>
+        </body>
+    </head>
+</html>
