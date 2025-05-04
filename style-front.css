@@ -40,27 +40,23 @@ section{
 header{
     position: fixed;
     top:0; left:0;right:0;
-    background: rgba(85, 78, 78, 0.644);
+    background: #02055b;
     z-index:1000;
     display:flex;
     align-items:center;
     justify-content: space-between;
-    padding: 2rem 9%;
+    padding: 2rem 8%;
 }
-header .logo{
-    font-size: 2.5rem ;
-    font-weight: bolder;
-    color:#fff;
-    text-transform: uppercase;
+header .navb img{
+    left:20;right:0;
+    height: 60px;
+    width: 85px;
 }
-header .logo span{
-    color:var(--orange);
 
-}
 header .navbar a{
     color:#fff;
     font-size: 2rem;
-    margin: 0.8rem;
+    margin: 1.5rem;
 }
 header .navbar a:hover{
     color:var(--orange);
@@ -147,8 +143,8 @@ body{
 }
 .heading{
     text-align: center;
-    padding-bottom: 3rem;
-    padding-top: .2rem;
+    padding-bottom: .3rem;
+    padding-top: 10rem;
     font-family:'Times New Roman', Times, serif;
     font-size:xx-large;
     color: var(--orange);
@@ -169,7 +165,7 @@ body{
 .gallery .box-container .box img{
     height:100%;
     width:100%;
-    object-fit: cover;
+    object-fit: fill;
 }
 
 .about .box-container p{
@@ -177,7 +173,7 @@ body{
     font-size: 30px;
     font-style: italic;
     padding: 4%;
-    gap: 2rem;
+    gap: .2rem;
 }
 
 /*media queries*/
