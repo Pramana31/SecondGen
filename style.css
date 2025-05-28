@@ -84,7 +84,11 @@ html{
     margin-left:0.5rem;
 }
 
-.address-icon:hover{
+.address-icon a{
+  color:#eb5353;
+}
+
+.address-icon a:hover{
   color: red;
 }
 
@@ -222,7 +226,7 @@ html{
 .about h2{
   text-align: center;
   color:#eb5353;
-  margin-top: 5rem;
+  margin-top: 3rem;
 }
 
 
@@ -236,6 +240,7 @@ html{
 .about .box-container p{
     font-size: 19px;
     font-style: italic;
+    padding:0.2rem;
 }
 
 .contact-section{
