@@ -30,30 +30,40 @@ html{
 }
 
 .navbar-home a{
-   font-size:19px ;
-
+   font-size:15px ;
    color: #eb5353;
    
 }
 
 .navbar-home a:hover{
-    color: red;
+  font-size: 18px;
+  color: red;
 }
 
 .navbar-about a{
-   font-size:19px ;
+   font-size:15px ;
    color: #eb5353;
    
 }
 
 .navbar-about a:hover{
+  font-size: 18px;
   color: red;
 }
 
+.navbar-about a{
+   font-size:15px ;
+   color: #eb5353;
+   
+}
+
+.navbar-about a:hover{
+  font-size: 18px;
+  color: red;
+}
 .nav-logo{
-    height:50px;
+    height:80px;
     width:100px;
-    margin-right: 0.5rem;
 }
 
 .logo{
@@ -61,6 +71,9 @@ html{
     background-size: cover;
     height:100px;
     width:100px;
+    transform: scale(1.3);
+    position: relative;
+    left: 3px;
 }
 
 
@@ -149,11 +162,31 @@ html{
     color: red;
 }
 
+.nav-seller button{
+  background-color: #fff; 
+  border: 2px solid #eb5353;
+  border-radius: 30px;
+  color: #eb5353;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+}
+
+.nav-seller button:hover{
+  background-color: #eb5353; 
+  border: 2px solid #eb5353;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+}
 
 .shop-section{
     display:flex;
     justify-content: space-evenly;
-    background-color: rgb(232, 232, 217);
+    background-color: lab(91.63% -2.59 7.28);
 }
 
 .box{
@@ -185,6 +218,7 @@ html{
     background-size: cover;
 }
 
+
 .about h2{
   text-align: center;
   color:#eb5353;
@@ -195,6 +229,7 @@ html{
 .about .box-container{
   margin-top: 1.5rem;
   text-align: center;
+  background-color: #e8e8e8;
 }
 
 
