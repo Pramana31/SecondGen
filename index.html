@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="nav-logo border">
+                <div class="logo"></div>
+            </div>
+
+
+            <div class="navbar-home border">
+                <a href="index.html">Home</a>
+            </div>
+
+            
+            <div class="navbar-about border">
+                <a href="#about">About</a>
+            </div>
+
+            <!--search section starts-->
+
+            <div class="nav-search">
+                <select class="search-select">
+                    <option>All</option>
+                    <option>Old Garments</option>
+                    <option>Second Hand Garments</option>
+                </select>
+                <input placeholder="Search Aamazon" class="search-input">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+
+            <!--deliver section starts-->
+
+            <div class="nav-address border">
+                <span class="deliver">Deliver to</span>
+                <div class="address-icon">
+                    <i class="fa-solid fa-location-dot"></i><p class="address">India</p>
+                </div>
+            </div>
+
+            <!--signin section starts-->
+
+            <div class="nav-signin">
+                <div class="btnLogin-popup"><i class="fa-solid fa-user"></i></div>
+            </div>
+
+            <!--cart section starts-->
+
+            <div class="nav-cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+
+
+        </div>
+    </header>
+
+    <!--login section starts-->
+
+    <div class="hero-section">
+      <div class="wrapper">
+        <span class="icon-close">
+          <ion-icon name="close"></ion-icon>
+        </span>
+        <div class="form-box login">
+          <h2>Login</h2>
+          <form action="#">
+            <div class="input-box">
+              <span class="icon"><ion-icon name="mail"></ion-icon></span>
+              <input type="email"required>
+              <label>Email</label>
+            </div>
+            <div class="input-box">
+              <span class="icon"><ion-icon name="eye-off"></ion-icon></span>
+              <input type="password"required>
+              <label>Password</label>
+            </div>
+            <div class="remember-forgot">
+              <label><input type="checkbox">Remember me</label>
+              <a href="#">Forgot password?</a>
+            </div>
+            <button type="submit"class="btn">Login</button>
+            <div class="register">
+              <p>Don't have an account?
+              <a href="#"class="register-link">Register</a></p>
+            </div>
+          </form>
+        </div>
+
+        <!--registration section starts-->
+
+        <div class="form-box register">
+          <h2>Registration</h2>
+          <form action="#">
+            <div class="input-box">
+              <span class="icon"><ion-icon name="person"></ion-icon></span>
+              <input type="text"required>
+              <label>Username</label>
+            </div>
+            <div class="input-box">
+              <span class="icon"><ion-icon name="mail"></ion-icon></span>
+              <input type="email"required>
+              <label>Email</label>
+            </div>
+            <div class="input-box">
+              <span class="icon"><ion-icon name="eye-off"></ion-icon></span>
+              <input type="password"required>
+              <label>Password</label>
+            </div>
+            <div class="remember-forgot">
+              <label><input type="checkbox">I agree to the terms & conditions</label>
+            </div>
+            <button type="submit"class="btn">Register</button>
+            <div class="register">
+              <p>Already have an account?
+              <a href="#"class="login-link">Login</a></p>
+            </div>
+          </form>
+        </div>
+
+      </div>
+</div>
+      <script src="script.js"></script>
+      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!--shop section starts-->
+
+    <div class="shop-section">
+        <div class="box" >
+            <div class="box-content">
+                <h2>Women's Wear</h2>
+                <div class="box-img" style="background-image: url('women_wear.png');"></div>
+                <a href="women.html">Shop now</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>Men's Wear</h2>
+                <div class="box-img" style="background-image: url('men_wear.png');">
+                </div>
+                <a href="men.html">Shop now</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>Kid's Wear</h2>
+                <div class="box-img" style="background-image: url('kidwear.png');">
+                </div>
+                <a href="kid.html">Shop now</a>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <!--about us section starts-->
+      <section class="about" id="about">
+          <h4 class="heading">About Us</h4>
+          <div class="box-container">
+                
+
+          </div>
+      </section>
+      <!--about us section ends-->
+</body>
+</html>
