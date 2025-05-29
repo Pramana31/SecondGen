@@ -293,17 +293,26 @@ html{
   font-size: 30px;
 }
 
-.hero-section{
-  background-image: url("clothes.png");
-  background-size: cover;
-  height:504px;
+
+.slideshow-container {
+  position: relative;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-position: center;
-  margin-top: 22px;
+  max-height: 600px;
+  overflow: hidden;
 }
+
+.slide-fade {
+  display: none;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
 .wrapper {
             position: relative;
             width: 350px;
