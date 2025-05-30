@@ -26,7 +26,7 @@
         </div>
         <div class="box">
             <div class="box-content">
-                <div class="box-img" style="background-image: url('womanwear.jpg');">
+                <div class="box-img" style="background-image: url('kurti.jpg');">
                 </div>
             </div>
         </div>

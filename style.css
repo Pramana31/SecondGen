@@ -4,7 +4,6 @@
     border: border-box;
     margin: 0;
     padding:0;
-    text-transform: capitalize;
     outline: none;
     border: none;
     text-decoration: none;
@@ -188,6 +187,7 @@ html{
 }
 
 .shop-section{
+    margin-top: 2.5rem;
     display:flex;
     justify-content: space-evenly;
     background-color: lab(91.63% -2.59 7.28);
@@ -233,19 +233,19 @@ html{
 .about .box-container{
   margin-top: 1.5rem;
   text-align: center;
+  font-style: italic;
   background-color: #e8e8e8;
 }
 
 
 .about .box-container p{
     font-size: 19px;
-    font-style: italic;
     padding:0.2rem;
 }
 
 .contact-section{
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 2.5rem;
+    margin-bottom: 0.5rem;
     display:flex;
     justify-content: space-evenly;
 }
@@ -258,7 +258,7 @@ html{
     background-color: white;
     padding: 20px 10px 15px;
     justify-content: space-evenly;
-    margin-top: 15px;
+    margin-top: 19px;
 }
 
 .contact-content h2{
@@ -268,7 +268,8 @@ html{
 }
 
 .contact-content p{
-  margin-top: 1rem;
+  margin-top: 1.5rem;
+  margin-left: 9px;
   font-size: 16px;
   padding:5px;
 }
@@ -295,21 +296,28 @@ html{
 
 
 .slideshow-container {
+  background-size: cover;
   position: relative;
   width: 100%;
-  max-height: 600px;
+  max-height: 550px;
   overflow: hidden;
 }
 
 .slide-fade {
   display: none;
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 2s;
 }
 
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
+}
+
+.hero-section{
+  background-color: #e8e8e8;
+  padding-top:2rem ;
+  padding-bottom: 2rem;
 }
 
 
@@ -369,7 +377,7 @@ html{
         .wrapper.active .form-box.register {
             transition: transform .18s ease;
             transform: translateX(0);
-        }
+          }
 .wrapper .icon-close{
   position: absolute;
   top: 0;
