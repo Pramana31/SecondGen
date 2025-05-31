@@ -3,61 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SecondGen</title>
-    <link rel="icon" href="logo.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>WomenWear</title>
     <link rel="stylesheet" href="style_women.css">
+    <link rel="stylesheet" href="header_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div id="header"></div>
-    <script>
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => {
-            document.getElementById('header').innerHTML = data;
-            });
-    </script>
-    <link rel="stylesheet" href="header_style.css">
-    <section>
-        <div>
-            <div class="shop-section">
-        <div class="box" >
-            <div class="box-content">
-                <div class="box-img" style="background-image: url('jacket.jpg');">Price:500</div>
+    
+    <div class="container">
+        <header id="header">
+        <div class="navbar">
+            <div class="nav-logo border">
+                <div class="logo"></div>
             </div>
-        </div>
-        <div class="box">
-            <div class="box-content">
-                <div class="box-img" style="background-image: url('suit1.jpg');">
+
+
+            <div class="navbar-home border">
+                <a href="index.html">Home</a>
+            </div>
+
+
+
+            <!--search section starts-->
+
+            <div class="nav-search">
+                <select class="search-select">
+                    <option>All</option>
+                    <option>Woman</option>
+                    <option>Man</option>
+                    <option>Kid</option>
+                </select>
+                <input placeholder="Search" class="search-input">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
             </div>
-        </div>
-        <div class="box">
-            <div class="box-content">
-                <div class="box-img" style="background-image: url('womanwear.jpg');">
+
+            <!--deliver section starts-->
+
+            <div class="nav-address border">
+                <div class="address-icon">
+                    <a href="address.html"><i class="fa-solid fa-location-dot"></i></a>
                 </div>
             </div>
-        </div>
-        <div class="box">
-            <div class="box-content">
-                <div class="box-img" style="background-image: url('womanwear1.jpg');">
-                </div>
+
+            <!--cart section starts-->
+
+            <div class="nav-cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>0</span>
             </div>
-        </div>
-        <div class="box">
-            <div class="box-content">
-                <div class="box-img" style="background-image: url('womanwear3.jpg');">
-                </div>
+            
+            <div class="nav-seller">
+                <a href="seller.html"><button>Be a Seller</button></a>
             </div>
+
         </div>
-        <div class="box">
-            <div class="box-content">
-                <div class="box-img" style="background-image: url('jeans.jpg');">
-                </div>
+    </header>
+        <div class="contentTab">
+            Content in template file
+        </div>
+    </div>
+    <div class="cartTab">
+        <h1>Shopping Cart</h1>
+        <div class="listCart">
+            Show item here
+        </div>
+        <div class="btn">
+            <button class="close">CLOSE</button>
+            <button class="checkOut">
+                CHECK OUT
             </div>
         </div>
     </div>
-        </div>
-    </section>
+
+    
+    
+    <script src="cart.js"></script>
 </body>
 </html>

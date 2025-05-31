@@ -1,5 +1,78 @@
 
 
+body{
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+.nav-cart{
+    position: relative;
+}
+.nav-cart i{
+    font-size: 30px;
+    color:#eb5353;
+}
+
+.nav-cart i:hover{
+    color: red;
+}
+.nav-cart span{
+    background-color: #FFF;
+    position: absolute;
+    top: 50%;
+    right: -15px;
+    width: 15px;
+    height: 15px;
+    color: #373737;
+    border: 1px solid #373737;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cartTab{
+    background-color: #373737;
+    color: #FFF;
+    position: relative;
+    width: 350px;
+    max-width: 100%;
+    position: fixed;
+    top: 90px;
+    right: 0;
+    bottom: 0;
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;/*The grid-template-rows property specifies the number (and the heights) of the rows in a grid layout.*/
+}
+.cartTab .btn{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.cartTab .btn button{
+    background-color: rgb(255, 255, 255);
+    border: none;
+    font-family: 'Poppins';
+    font-weight: 500;
+}
+.cartTab .btn button.close{
+    background-color: #f1ec51;
+    font-family: 'Poppins';
+    font-weight: 500;
+}
+.cartTab .listCart{
+    overflow: auto; /*when you want to hide overflowing content but only display scrollbars if the content actually overflows*/
+}
+.cartTab .listCart::-webkit-scrollbar{
+    width: 0;
+}
+.cartTab{
+    right: -400px;
+    transition: 0.7s;
+}
+body.activeTabCart .cartTab{
+    right: 0;
+}
+body.activeTabCart .cartTab{
+    transform: translateX(0px);
+}
 
 .shop-section{
     background-color: rgb(232, 232, 217);
@@ -20,8 +93,6 @@
   margin-left: 1rem;
   margin-right: 1rem;
 }
-
-
 
 .box-img{
     height:400px;

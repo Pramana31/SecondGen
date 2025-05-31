@@ -6,6 +6,7 @@
     <title>SecondGen</title>
     <link rel="icon" href="logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -61,7 +62,8 @@
             <!--cart section starts-->
 
             <div class="nav-cart">
-                <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>0</span>
             </div>
 
             <div class="nav-seller">
@@ -95,7 +97,8 @@
 
     <!--login section-->
 
-<center>   <div class="hero-section" id="hero">
+<center>   
+  <div class="hero-section" id="hero">
     <div class="wrapper">
     <span class="icon-close">
       <ion-icon name="close"></ion-icon>
@@ -155,10 +158,12 @@
     </div>
 
   </div>
-</div> </center>
+</div> 
+</center>
   <script src="script.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
     <!--shop section starts-->
 
     <div class="shop-section">
@@ -216,14 +221,20 @@
 
       <div class="contact-section" id="contact">
           <div class="contact-content">
-              <h2>Contact Us</h2>
+              <center><h2>Contact Us</h2>
               <p><i class="fa-solid fa-phone"></i>&nbsp;&nbsp; 123-8873879</p>
               <p><i class="fa-regular fa-envelope"></i>&nbsp;&nbsp; secondgen@gmail.com</p>
+              <p>You can alse follow us in the given platforms</p></center><br>
+              <div class="social-plat">
+                <a href="#"><i class='bx bxl-google'></i></a>&nbsp;&nbsp;&nbsp;&nbsp;  
+                <a href="#"><i class='bx bxl-facebook'></i></a>&nbsp;&nbsp;&nbsp;&nbsp;  
+                <a href="#"><i class='bx bxl-github'></i></a>&nbsp;&nbsp;&nbsp;&nbsp;  
+                <a href="#"><i class='bx bxl-linkedin'></i></a>&nbsp;&nbsp;&nbsp;&nbsp;  
+              </div>
           </div>
+            
       </div>
-<marquee behavior="scroll" direction="left" loop="-1">
-            <img src="bg.png">
-        </marquee>
+
 
       <!--End section starts-->
 
@@ -233,7 +244,6 @@
             <div class="content2"><a href="#"><i aria-hidden="true" class="fas fa-angle-double-up"></i></a></div>
           </div>
       </div>
-
      
       
 </body>
