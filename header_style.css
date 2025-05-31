@@ -157,6 +157,10 @@ html{
     color: red;
 }
 
+.nav-cart{
+    position: relative;
+}
+
 .nav-cart i{
     font-size: 30px;
     color:#eb5353;
@@ -164,6 +168,21 @@ html{
 
 .nav-cart i:hover{
     color: red;
+}
+
+.nav-cart span{
+    background-color: #FFF;
+    position: absolute;
+    top: 50%;
+    right: -15px;
+    width: 15px;
+    height: 15px;
+    color: #373737;
+    border: 1px solid #373737;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav-seller button{
