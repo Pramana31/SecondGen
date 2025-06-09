@@ -26,7 +26,7 @@
         </div>
         <div class="box">
             <div class="box-content">
-                <div class="box-img" style="background-image: url('kidwear8.JPG');">
+                <div class="box-img" style="background-image: url('kidwear8.jpg');">
                 </div>
             </div>
         </div>
