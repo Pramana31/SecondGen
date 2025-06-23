@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SecondGen</title>
     <link rel="icon" href="logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="address_style.css">
 </head>
 <body>
-    <?php include 'header.html'; ?>
+    <?php include 'header1.html'; ?>
     <center>   
-        <div>
+        <div class="address-details">
             <span>
             <h2>Add A New Address</h2></span>
-            <div>
+            <div class="input-div">
                 <form method="POST" action="">
 
                     <div class="input-box">
@@ -21,7 +23,7 @@
                     </div>
 
                     <div class="input-box">
-                    <input type="text" name="contact" required>
+                    <input type="digit" name="contact" required>
                     <label>10-digit mobile number</label>
                     </div>
 
@@ -41,7 +43,7 @@
                     </div>
 
                     <div class="input-box">
-                    <input type="text" name="pincode" required>
+                    <input type="digit" name="pincode" required>
                     <label>Pincode</label>
                     </div>
 
@@ -52,17 +54,15 @@
 
                     <div class="input-box">
                     <input type="text" name="alternate">
-                    <label>Alternate Phone (Optional)</label>
-                    </div>
-
-                    <div class="input-box">
-                    <input type="" name="area" required>
-                    <label></label>
+                    <label>Alternative Phone Number(Optional)</label>
                     </div>
                     
-
-                    <button type="submit" name="save">SAVE</button> <br>
-                    <button type="submit" name="cancel">CANCEL</button>
+                    <div class="button1">
+                        <button type="submit" name="save">SAVE</button>
+                    </div>
+                    <div class="button2">
+                        <button type="submit" name="cancel">CANCEL</button>
+                    </div>
                 </form>
             </div>
         </div>

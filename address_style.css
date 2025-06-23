@@ -1,0 +1,98 @@
+*{
+    margin:0;
+    font-family: 'Times New Roman';
+    border: border-box;
+    margin: 0;
+    padding:0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+
+html{
+    overflow-x: hidden;
+    scroll-padding-top: 6rem;
+    scroll-behavior: smooth;
+}
+
+.address-details{
+    background: url('index.jpg');
+    padding-top:2rem ;
+    padding-bottom: 2rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: cover;
+    background-position: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.address-details h2{
+    font-size: 30px;
+}
+
+.input-div{
+    border: 3px solid #eb5353 ;
+    height:690px;
+    width:35%;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px 0px 15px;
+    margin-top: 15px;
+    margin-bottom: 55px;
+}
+
+.input-box{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid black;
+  margin: 20px 0;
+}
+.input-box label{
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: black;
+  font-weight: 500;
+  pointer-events: none;
+  transition: .4s;
+}
+
+.input-box input{
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: none;
+  font-weight: 500;
+  padding: 0 35px 0 5px;
+}
+
+.address-details button{
+    background-color: #fff; 
+    border: 2px solid #eb5353;
+    border-radius: 30px;
+    color: #eb5353;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+}
+
+.address-details button:hover{
+  background-color: #eb5353; 
+  border: 2px solid #eb5353;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.button2{
+    margin-top: 7px;
+}
