@@ -1,4 +1,6 @@
-<?php session_start();?>
+<?php if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    };?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +21,7 @@
 
 
             <div class="navbar-home border">
-                <a href="index.html">Home</a>
+                <a href="index.php">Home</a>
             </div>
 
             
@@ -57,7 +59,8 @@
             <!--signin section starts-->
 
             <div class="nav-signin">
-                
+                <?php if (isset($_SESSION['USER'])) { ?>
+                    <p>Welcome, <?php echo htmlspecialchars($_SESSION['USER']); }?>!</p>
             </div>
 
 

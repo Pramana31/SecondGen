@@ -19,7 +19,7 @@
 
 
             <div class="navbar-home border">
-                <a href="index.html">Home</a>
+                <a href="index.php">Home</a>
             </div>
 
             
@@ -106,10 +106,50 @@
     </span>
     <div class="form-box login">
       <h2>Login</h2>
-      <form method="POST" action="login.php">
+
+<?php
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
+    if($_SERVER["REQUEST_METHOD"] == "POST")
+    {
+            $username = $_POST['usname'] ?? '';
+            $password = $_POST['pass'] ?? '';
+            if(!empty($username))
+            {
+                if(!empty($password))
+                {
+                    $user="root";
+                    $pswd="";
+                    $dbms="secondgen";
+                    $connect= new mysqli("localhost",$user,$pswd,$dbms);
+                    if(!$connect)
+                        die("Not connected");
+                    else{
+                        $sql="SELECT `USER` FROM `REGISTER` WHERE `USER` = '$username' and `PSWD` = '$password';";
+                        $sql1="SELECT * FROM `REGISTER`";
+                        $result=$connect->query($sql);
+                        if($result == TRUE){
+                            if($result->num_rows > 0){
+                                $row=$result->fetch_assoc();
+                                //echo $row['USER'];
+                                $_SESSION['USER']=$row['USER'];
+                                //echo $_SESSION['USER'];
+                                header("location:index1.php");
+                                exit();
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+?>
+
+      <form method="POST">
         <div class="input-box">
           <span class="icon"><ion-icon name="person"></ion-icon></span>
-          <input type="text" name="usname" value="<?=$username?>" required>
+          <input type="text" name="usname" required>
           <label>Username</label>
         </div>
         <div class="input-box">
