@@ -49,7 +49,7 @@
 
             <div class="nav-address border">
                 <div class="address-icon">
-                    <a href="address.html"><i class="fa-solid fa-location-dot"></i></a>
+                    <a href="address.php"><i class="fa-solid fa-location-dot"></i></a>
                 </div>
             </div>
 
@@ -62,8 +62,7 @@
             <!--cart section starts-->
 
             <div class="nav-cart">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span>0</span>
+                <a href="ShoppingCart.html"><i class="fa-solid fa-cart-shopping"></i></a>
             </div>
 
             <div class="nav-seller">
@@ -105,22 +104,22 @@
     </span>
     <div class="form-box login">
       <h2>Login</h2>
-      <form action="#">
+      <form action="login.php">
         <div class="input-box">
           <span class="icon"><ion-icon name="mail"></ion-icon></span>
-          <input type="email"required>
-          <label>Email</label>
+          <input type="text" name="usname" required>
+          <label>Username</label>
         </div>
         <div class="input-box">
           <span class="icon" id="login-eyeicon"><ion-icon name="eye-off"></ion-icon></span>
-            <input type="password" required id="login-password">
+            <input type="password" name="pass" required id="login-password">
           <label>Password</label>
         </div>
         <div class="remember-forgot">
           <label><input type="checkbox">Remember me</label>
           <a href="#">Forgot password?</a>
         </div>
-        <button type="submit"class="btn">Login</button>
+        <button type="submit" class="btn" name="login">Login</button>
         <div class="register">
           <p>Don't have an account?
           <a href="#"class="register-link">Register</a></p>
@@ -129,27 +128,27 @@
     </div>
 
     <div class="form-box register">
-      <h2>Registeration</h2>
-      <form action="#">
+      <h2>Registration</h2>
+      <form action="register.php">
         <div class="input-box">
           <span class="icon"><ion-icon name="person"></ion-icon></span>
-          <input type="text"required>
+          <input type="text" name="usname" required>
           <label>Username</label>
         </div>
         <div class="input-box">
           <span class="icon"><ion-icon name="mail"></ion-icon></span>
-          <input type="email"required>
+          <input type="email" name="email" required>
           <label>Email</label>
         </div>
         <div class="input-box">
           <span class="icon" id="register-eyeicon"><ion-icon name="eye-off"></ion-icon></span>
-              <input type="password" required id="register-password">
+              <input type="password" name="pass" required id="register-password">
           <label>Password</label>
         </div>
         <div class="remember-forgot">
           <label><input type="checkbox">I agree to the terms & conditions</label>
         </div>
-        <button type="submit"class="btn">Register</button>
+        <button type="submit"class="btn" name="reg" >Register</button>
         <div class="register">
           <p>Already have an account?
           <a href="#"class="login-link">Login</a></p>
@@ -171,7 +170,7 @@
             <div class="box-content">
                 <h2>Women's Wear</h2>
                 <div class="box-img" style="background-image: url('women_wear.png');"></div>
-                <a href="women.php">Shop now</a>
+                <a href="product.html">Shop now</a>
             </div>
         </div>
         <div class="box">
@@ -179,7 +178,7 @@
                 <h2>Men's Wear</h2>
                 <div class="box-img" style="background-image: url('men_wear.png');">
                 </div>
-                <a href="men.php">Shop now</a>
+                <a href="men_product.html">Shop now</a>
             </div>
         </div>
         <div class="box">
@@ -187,7 +186,7 @@
                 <h2>Kid's Wear</h2>
                 <div class="box-img" style="background-image: url('kidwear.png');">
                 </div>
-                <a href="kid.php">Shop now</a>
+                <a href="kid_product.html">Shop now</a>
             </div>
         </div>
     </div>
