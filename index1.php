@@ -72,7 +72,7 @@
             </div>
 
             <div class="nav-seller">
-                <a href="seller.html"><button>Be a Seller</button></a>
+                <a href="seller.php"><button>Be a Seller</button></a>
             </div>
 
 
