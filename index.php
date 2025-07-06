@@ -40,11 +40,12 @@
                     <option>Man</option>
                     <option>Kid</option>
                 </select>
-                <input placeholder="Search" class="search-input">
+                <input placeholder="Search..." class="search-input" onkeyup="searchFunction()">
                 <div class="search-icon">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                  <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
             </div>
+
 
             <!--deliver section starts-->
 
@@ -68,7 +69,7 @@
             </div>
 
             <div class="nav-seller">
-                <a href="seller.html"><button>Be a Seller</button></a>
+                <a href="seller.php"><button>Be a Seller</button></a>
             </div>
 
 
@@ -106,7 +107,27 @@
     </span>
     <div class="form-box login">
       <h2>Login</h2>
-
+      <?php
+                if(isset($_POST['login']))
+                {
+                    $username=$_POST['usname'];
+                    $password=$_POST['pass'];
+                    $user="root";
+                    $pswd="";
+                    $dbms="secondgen";
+                    $connect= new mysqli("localhost",$user,$pswd,$dbms);
+                    if(!$connect)
+                        die("Not connected");
+                    else
+                    {
+                        $sql = "INSERT INTO `LOGIN` VALUES('$username','$password');";
+                        if($connect->query($sql)==TRUE)
+                        {
+                            echo("Log in successful!!");
+                        }
+                    }
+                }
+      ?>
 <?php
     if (session_status() === PHP_SESSION_NONE) {
         session_start();
@@ -115,6 +136,8 @@
     {
             $username = $_POST['usname'] ?? '';
             $password = $_POST['pass'] ?? '';
+            $name = preg_replace('/[0-9]/', '', $username);
+            $name = ucfirst(strtolower($name));
             if(!empty($username))
             {
                 if(!empty($password))
@@ -131,10 +154,7 @@
                         $result=$connect->query($sql);
                         if($result == TRUE){
                             if($result->num_rows > 0){
-                                $row=$result->fetch_assoc();
-                                //echo $row['USER'];
-                                $_SESSION['USER']=$row['USER'];
-                                //echo $_SESSION['USER'];
+                                $_SESSION['USER']=$name;
                                 header("location:index1.php");
                                 exit();
                             }
@@ -162,15 +182,54 @@
           <a href="#">Forgot password?</a>
         </div>
         <button type="submit" class="btn" name="login">Login</button>
-        <div class="register">
+        <div class="register" id="register">
           <p>Don't have an account?
-          <a href="#"class="register-link">Register</a></p>
+          <a href="#register"class="register-link">Register</a></p>
         </div>
       </form>
     </div>
 
     <div class="form-box register">
       <h2>Registration</h2>
+
+<?php
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
+    if($_SERVER["REQUEST_METHOD"] == "POST")
+    {
+            $username = $_POST['usname'] ?? '';
+            $password = $_POST['pass'] ?? '';
+            $email = $_POST['email'] ?? '';
+            $name = preg_replace('/[0-9]/', '', $username);
+            $name = ucfirst(strtolower($name));
+            if(!empty($username))
+            {
+                if(!empty($password))
+                {
+                    $user="root";
+                    $pswd="";
+                    $dbms="secondgen";
+                    $connect= new mysqli("localhost",$user,$pswd,$dbms);
+                    if(!$connect)
+                        die("Not connected");
+                    else{
+                        $sql1="SELECT `USER` FROM `REGISTER` WHERE `USER` = '$username' and `PSWD` = '$password';";
+                        $result1=$connect->query($sql);
+                        if($result1 == TRUE){
+                            if($result1->num_rows > 0){
+                                $_SESSION['USER']=$name;
+                                header("location:index1.php");
+                                exit();
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+?>
+
       <form method="POST" action="register.php">
         <div class="input-box">
           <span class="icon"><ion-icon name="person"></ion-icon></span>
@@ -193,7 +252,7 @@
         <button type="submit"class="btn" name="reg" >Register</button>
         <div class="register">
           <p>Already have an account?
-          <a href="#"class="login-link">Login</a></p>
+          <a href="#register"class="login-link">Login</a></p>
         </div>
       </form>
     </div>
@@ -212,7 +271,7 @@
             <div class="box-content">
                 <h2>Women's Wear</h2>
                 <div class="box-img" style="background-image: url('women_wear.png');"></div>
-                <a href="women.php">Shop now</a>
+                <a href="product.html">Shop now</a>
             </div>
         </div>
         <div class="box">
@@ -233,7 +292,8 @@
         </div>
     </div>
 
-    
+  <script src="front-script.js"></script>
+
 
     <!--about us section starts-->
       <div class="about" id="about">
@@ -265,10 +325,10 @@
               <center><h2>Contact Us</h2>
               <p><i class="fa-solid fa-phone"></i>&nbsp;&nbsp; 123-8873879</p>
               <p><i class="fa-regular fa-envelope"></i>&nbsp;&nbsp; secondgen@gmail.com</p>
-              <p>You can alse follow us in the given platforms</p></center><br>
+              <p>Follow us on</p></center><br>
               <div class="social-plat">
                 <a href="#"><i class='bx bxl-google'></i></a>&nbsp;&nbsp;&nbsp;&nbsp;  
-                <a href="#"><i class='bx bxl-facebook'></i></a>&nbsp;&nbsp;&nbsp;&nbsp;  
+                <a href="https://www.facebook.com/profile.php?id=61578054392863"><i class='bx bxl-facebook'></i></a>&nbsp;&nbsp;&nbsp;&nbsp;  
                 <a href="https://github.com/Pramana31/SecondGen"><i class='bx bxl-github'></i></a>&nbsp;&nbsp;&nbsp;&nbsp;  
                 <a href="#"><i class='bx bxl-linkedin'></i></a>&nbsp;&nbsp;&nbsp;&nbsp;  
               </div>
