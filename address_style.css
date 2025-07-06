@@ -7,7 +7,6 @@
     outline: none;
     border: none;
     text-decoration: none;
-    transition: all .2s linear;
 }
 
 
@@ -18,29 +17,26 @@ html{
 }
 
 .address-details{
-    background: url('index.jpg');
-    padding-top:2rem ;
-    padding-bottom: 2rem;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-size: cover;
-    background-position: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    position: relative;
+  overflow: hidden;
 }
 
-.address-details h2{
-    font-size: 30px;
-    margin-bottom: 35px;
+.address-details::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.4; /* Adjust opacity here */
+  z-index: 0;
 }
+
 
 .input-div{
     border: 3px solid brown;
-    height:690px;
-    width:25%;
+    height:1500px;
+    width:35%;
     background-color: rgba(255, 255, 255, 0.1);
-    padding: 50px;
-    margin:15px auto;
+    padding: 60px;
+    margin:5px;
 }
 
 .input-box{
@@ -91,8 +87,4 @@ html{
   color: #fff;
   font-size: 15px;
   font-weight: bold;
-}
-
-.button2{
-    margin-top: 7px;
 }
