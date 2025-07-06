@@ -13,7 +13,7 @@
 
 html{
     overflow-x: hidden;
-    scroll-padding-top: 6rem;
+    /*scroll-padding-top: 6rem;*/
     scroll-behavior: smooth;
 }
 
@@ -507,6 +507,9 @@ html{
   font-size: 1em;
   color: black;
   font-weight: 500;
+}
+#register {
+  scroll-margin-top: 200px; /* adjust to your header height */
 }
 .register{
   font-size: .9em;
